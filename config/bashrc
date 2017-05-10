@@ -1,0 +1,17 @@
+if [ -z "$PS1" ]; then
+   return
+fi
+
+if [ -f /etc/bashrc ]; then
+    source /etc/bashrc
+fi
+
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+    source /usr/local/share/bash-completion/bash_completion
+fi
+
+if ls --color=auto &> /dev/null; then
+    alias ls="ls --color=auto"
+else
+    export CLICOLOR=1
+fi
