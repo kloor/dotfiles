@@ -5,11 +5,13 @@
 fresh 'shell/*'
 fresh nojhan/liquidprompt liquidprompt
 
+fresh 'bin/*' --bin
 fresh freshshell/fresh bin/fresh --bin
 fresh raylee/tldr tldr --bin
 
-fresh 'config/*' --file
+fresh 'file/*' --file
 fresh ssh/config --file=~/.ssh/config
+fresh arcticicestudio/nord-dircolors src/dir_colors --file
 
 fresh-options --file=~/.bashrc
     fresh mrzool/bash-sensible sensible.bash
