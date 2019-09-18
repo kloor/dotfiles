@@ -258,7 +258,7 @@ set tabstospaces
 ## them easier to remember and faster to type using nano's -Y option.
 
 ## To include all existing syntax definitions, you can do:
-include "/usr/local/Cellar/nano/4.3/share/nano/*.nanorc"
+include "/usr/local/Cellar/nano/4.4/share/nano/*.nanorc"
 
 
 ## Key bindings.
