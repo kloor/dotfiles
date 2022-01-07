@@ -2,12 +2,20 @@ if [ -z "$PS1" ]; then
    return
 fi
 
-if [ -f /etc/bashrc ]; then
+if [ -r /etc/bashrc ]; then
     source /etc/bashrc
 fi
 
-if [ -f /usr/local/share/bash-completion/bash_completion ]; then
-    source /usr/local/share/bash-completion/bash_completion
+if [ -r /usr/local/etc/profile.d/bash_completion.sh ]; then
+    if [ -d /usr/local/etc/bash_completion.d ]; then
+        export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d";
+    fi
+
+    source /usr/local/etc/profile.d/bash_completion.sh
+fi
+
+if [ -f /etc/bash_completion ]; then
+    source /etc/bash_completion
 fi
 
 if ls --color=auto &> /dev/null; then
@@ -18,10 +26,10 @@ else
     export CLICOLOR=1
 fi
 
-if [ -f ~/.dir_colors ]; then
-    if hash dircolors 2>/dev/null; then
-        eval `dircolors -b ~/.dir_colors`
-    elif hash gdircolors 2>/dev/null; then
-        eval `gdircolors -b ~/.dir_colors`
+if [ -r ~/.dircolors ]; then
+    if dircolors &> /dev/null; then
+        eval $(dircolors -b ~/.dircolors)
+    elif gdircolors &> /dev/null; then
+        eval $(gdircolors -b ~/.dircolors)
     fi
 fi

@@ -3,6 +3,7 @@
 # See http://freshshell.com/readme for documentation.
 
 fresh 'shell/*'
+fresh mrzool/bash-sensible sensible.bash
 fresh nojhan/liquidprompt liquidprompt
 
 fresh 'bin/*' --bin
@@ -10,12 +11,6 @@ fresh freshshell/fresh bin/fresh --bin
 fresh raylee/tldr tldr --bin
 
 fresh 'file/*' --file
+fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
+fresh arcticicestudio/nord-dircolors src/dir_colors --file=~/.dircolors
 fresh ssh/config --file=~/.ssh/config
-fresh arcticicestudio/nord-dircolors src/dir_colors --file
-
-fresh-options --file=~/.bashrc
-    fresh mrzool/bash-sensible sensible.bash
-    fresh freshshell/fresh contrib/completion/fresh-completion.bash
-    fresh freshshell/fresh contrib/source-build.sh
-fresh-options
-
