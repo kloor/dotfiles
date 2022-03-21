@@ -6,9 +6,8 @@ fresh 'shell/*'
 fresh mrzool/bash-sensible sensible.bash
 fresh nojhan/liquidprompt liquidprompt
 
-fresh 'bin/*' --bin
 fresh freshshell/fresh bin/fresh --bin
-fresh raylee/tldr tldr --bin
+fresh raylee/tldr-sh-client tldr --bin
 
 fresh 'file/*' --file
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
