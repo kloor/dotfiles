@@ -13,3 +13,13 @@ fresh 'file/*' --file
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 fresh arcticicestudio/nord-dircolors src/dir_colors --file=~/.dircolors
 fresh ssh/config --file=~/.ssh/config
+
+fresh-options --file=~/.nanorc
+    fresh nano/nanorc
+
+    if [[ "$(hostname -s)" =~ ^libweb(test)?1$ ]]; then
+        fresh nano/nanorc.old
+    else
+        fresh nano/nanorc.new
+    fi
+fresh-options

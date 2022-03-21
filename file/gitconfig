@@ -1,3 +1,6 @@
 [user]
 name = John Kloor
 email = john@kloor.org
+
+[push]
+default = simple

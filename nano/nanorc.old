@@ -1,0 +1,4 @@
+
+## Constantly display the cursor position in the statusbar.  Note that
+## this overrides "quickblank".
+set const
