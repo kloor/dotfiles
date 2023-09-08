@@ -1,15 +1,2 @@
 ServerAliveInterval 30
 ServerAliveCountMax 20
-
-Host github.com
-   Hostname ssh.github.com
-   Port 443
-
-Host lib
-  HostName lib
-
-Host libtest
-  HostName libtest
-
-Host zeus
-  HostName kloor.org
