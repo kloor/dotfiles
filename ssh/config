@@ -1,2 +1,18 @@
 ServerAliveInterval 30
 ServerAliveCountMax 20
+
+Host lib
+    HostName lib
+
+Host libtest
+    HostName libtest
+
+Host lib-2023
+    HostName libweb-2023
+
+Host libtest-2023
+    HostName libwebtest-2023
+
+Host zeus
+    HostName kloor.org
+
