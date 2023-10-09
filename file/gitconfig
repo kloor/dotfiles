@@ -4,3 +4,6 @@ email = john@kloor.org
 
 [push]
 default = simple
+
+[init]
+defaultBranch = main
