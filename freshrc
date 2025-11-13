@@ -3,6 +3,7 @@
 # See http://freshshell.com/readme for documentation.
 
 fresh 'shell/*'
+fresh freshshell/fresh contrib/completion/fresh-completion.bash
 fresh mrzool/bash-sensible sensible.bash
 fresh nojhan/liquidprompt liquidprompt
 
